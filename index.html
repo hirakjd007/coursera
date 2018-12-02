@@ -33,7 +33,7 @@
                             Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginbutton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -169,7 +169,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-small btn-warning btn-block" data-toggle="modal" data-target="#reservemodal">Reserve
+                    <a class="btn btn-small btn-warning btn-block" id="reservetablebutton">Reserve
                         Table</a>
                 </div>
             </div>
@@ -357,9 +357,14 @@
                 }
                
             });
+            $("#reservetablebutton").click(function(){
+                $("#reservemodal").modal('show');
+            });
+            $("#loginbutton").click(function(){
+                $("#loginModal").modal('show');
+            });
         });
     </script>
-
 </body>
 
 </html>
